@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://120.78.189.119:3306/blog
+        username: root
+        password: 123456
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+    typeAliasesPackage: com.xdd.entity
+    mapperLocations: classpath:mapper/*.xml
