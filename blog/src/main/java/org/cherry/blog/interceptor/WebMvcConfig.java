@@ -1,5 +1,26 @@
 package org.cherry.blog.interceptor;
 
-public class WebMvcConfig extends Base{
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.AntPathMatcher;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 
+@Slf4j
+public class WebMvcConfig extends BaseWebMvcConfig{
+    @Autowired
+    private MemberInterceptor member;
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        log.debug("-------------WebMvcConfig");
+        registry.addInterceptor(member);
+    }
+
+    @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        AntPathMatcher matcher = new AntPathMatcher();
+        matcher.setCaseSensitive(false);
+        configurer.setPathMatcher(matcher);
+    }
 }

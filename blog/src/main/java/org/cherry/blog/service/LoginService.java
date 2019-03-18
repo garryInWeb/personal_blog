@@ -14,6 +14,7 @@ public class LoginService {
     public boolean loginCheck(HttpServletRequest request){
         Cookie[] cookies = request.getCookies();
         String userName = null,loginName = null;
+        if (cookies == null) return false;
         for (Cookie cookie : cookies){
             if (cookie.getName().equals(CookieEnum.LOGIN_COOKIE.getValue())){
                 loginName = Cryptography.decrypt(cookie.getValue(), CookieKey.cookieKey);
