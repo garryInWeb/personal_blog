@@ -22,13 +22,26 @@ public class MemberInterceptor extends HandlerInterceptorAdapter {
     @Lazy
     private LoginService loginService;
 
+    private String unNeedLogin = "/user/login";
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        if (loginService.loginCheck(request)){
+        String uri = request.getRequestURI();
+
+        if (isNoNeedLogin(uri) || loginService.loginCheck(request)){
             return true;
         }else{
             throw new AppBusinessException(CommonErrorCode.UNAUTHORIZED);
         }
+    }
+
+    private boolean isNoNeedLogin(String uri) {
+        String[] unNeedLogins = unNeedLogin.split(",");
+        for (String unNeedLogin : unNeedLogins){
+            if (uri.contains(unNeedLogin))
+                return true;
+        }
+        return false;
     }
 }
