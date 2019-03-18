@@ -11,4 +11,6 @@ import org.mybatis.spring.annotation.MapperScan;
 public class BaseConfiguration {
     public BaseConfiguration() {
     }
+
+
 }
