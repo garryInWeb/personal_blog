@@ -4,12 +4,12 @@
 
     <select id="selectAll" resultType="org.cherry.blog.domain.User">
         SELECT id id, user_name userName, user_pwd userPwd
-        FROM user
+        FROM tb_user
     </select>
 
     <select id="queryByUserName" parameterType="java.lang.String" resultType="org.cherry.blog.domain.User">
-        SELECT id id, user_name userName, user_pwd userPwd
-        FROM user
+        SELECT id id, user_name userName, user_pwd userPwd,nick_name nickName,create_time createTime,update_time updateTime,is_delete isDelete
+        FROM tb_user
         WHERE user_name=#{userName} AND user_pwd=#{userPwd}
     </select>
 
