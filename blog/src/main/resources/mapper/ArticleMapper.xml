@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.cherry.blog.dao.ArticleDao" >
+
+    <insert id="save" parameterType="org.cherry.blog.domain.Article">
+        INSERT INTO tb_article
+        (
+          `article_typeId`,
+          `article_title`,
+          `article_content`,
+          `article_info`,
+          `article_count`,
+          `article_from`,
+          `create_time`,
+          `update_time`,
+          `is_delete`
+        )
+        VALUES
+        (
+          #{articleTypeId},
+          #{articleTitle},
+          #{articleContent},
+          #{articleInfo},
+          #{articleCount},
+          #{articleFrom},
+          #{createTime},
+          #{updateTime},
+          #{isDelete}
+        )
+    </insert>
+
+    <select id="selectAll" resultType="org.cherry.blog.domain.Article">
+        SELECT *
+        FROM tb_article
+    </select>
+
+</mapper>

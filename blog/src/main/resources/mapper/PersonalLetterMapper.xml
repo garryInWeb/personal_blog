@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.cherry.blog.dao.PersonalLetterDao" >
+    <insert id="save" parameterType="org.cherry.blog.domain.PersonalLetter">
+        INSERT INTO tb_personal_letter
+        (
+        `letter_content`,
+        `ip_address`,
+        `review_img`,
+        `status`,
+        `create_time`,
+        `update_time`,
+        `is_delete`
+        )
+        VALUES
+        (
+        #{letterContent},
+        #{ipAddress},
+        #{reviewImg},
+        #{status},
+        #{createTime},
+        #{updateTime},
+        #{isDelete}
+        )
+    </insert>
+
+
+</mapper>
