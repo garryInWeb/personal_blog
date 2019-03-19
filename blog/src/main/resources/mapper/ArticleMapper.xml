@@ -29,9 +29,29 @@
         )
     </insert>
 
-    <select id="selectAll" resultType="org.cherry.blog.domain.Article">
+    <update id="update" parameterType="org.cherry.blog.domain.Article">
+        update tb_article
+        <set>
+            <if test="articleTypeId != null">`article_typeId` = #{articleTypeId},</if>
+            <if test="articleTitle != null">`article_title` = #{articleTitle},</if>
+            <if test="articleContent != null">`article_content` = #{articleContent},</if>
+            <if test="articleInfo != null">`article_info` = #{articleInfo},</if>
+            <if test="updateTime != null">`update_time` = #{updateTime},</if>
+            <if test="isDelete != null">`is_delete` = #{isDelete}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="selectAll" resultType="org.cherry.blog.dto.ArticleDto">
+        SELECT *
+        FROM tb_article tar LEFT JOIN tb_articleType typ ON tar.article_typeId = typ.id
+        WHERE tar.is_delete = 0
+    </select>
+
+    <select id="selectByTypeId" resultType="org.cherry.blog.dto.ArticleDto">
         SELECT *
         FROM tb_article
+        WHERE is_delete = 0 AND article_typeId=#{typeId}
     </select>
 
 </mapper>

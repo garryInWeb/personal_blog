@@ -22,7 +22,7 @@ public class MemberInterceptor extends HandlerInterceptorAdapter {
     @Lazy
     private LoginService loginService;
 
-    private String unNeedLogin = "/user/login";
+    private String unNeedLogin = "/user/login,/article/all";
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

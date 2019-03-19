@@ -1,15 +1,17 @@
 package org.cherry.blog.constant;
 
-public enum CookieEnum {
-    LOGIN_COOKIE("登陆cookie","LOGIN_COOKIE"),
-    USER_NAME("用户名","USER_NAME")
+/**
+ * Created by zhengtengfei on 2019/3/19.
+ */
+public enum PersonalLetterStatusEnum {
+    UN_READ("未读消息",0),
+    AL_READ("已读消息",1)
     ;
 
-
     private String name;
-    private String value;
+    private int value;
 
-    CookieEnum(String name, String value) {
+    PersonalLetterStatusEnum(String name, int value) {
         this.name = name;
         this.value = value;
     }
@@ -22,12 +24,11 @@ public enum CookieEnum {
         this.name = name;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(int value) {
         this.value = value;
     }
 }
-

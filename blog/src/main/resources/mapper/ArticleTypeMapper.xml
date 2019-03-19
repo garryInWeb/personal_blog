@@ -37,4 +37,8 @@
         WHERE id = #{id}
     </select>
 
+    <select id="findAll" resultType="org.cherry.blog.domain.ArticleType">
+        SELECT * FROM tb_articleType
+    </select>
+
 </mapper>

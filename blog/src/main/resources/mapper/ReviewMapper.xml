@@ -6,6 +6,7 @@
         (
         `review_articleID`,
         `review_content`,
+        `ip_address`,
         `review_img`,
         `create_time`,
         `update_time`,
@@ -15,6 +16,7 @@
         (
         #{reviewArticleID},
         #{reviewContent},
+        #{ipAddress},
         #{reviewImg},
         #{createTime},
         #{updateTime},

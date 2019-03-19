@@ -24,5 +24,20 @@
         )
     </insert>
 
+    <update id="update" parameterType="org.cherry.blog.domain.PersonalLetter">
+        update tb_personal_letter
+        <set>
+            `status` = #{status}
+        </set>
+        where id = #{id}
+    </update>
+    <select id="queryByStatus" resultType="org.cherry.blog.domain.PersonalLetter">
+        SELECT * FROM tb_personal_letter
+        WHERE status = #{status}
+    </select>
+    <select id="findAll" resultType="org.cherry.blog.domain.PersonalLetter">
+        SELECT * FROM tb_personal_letter
+    </select>
+
 
 </mapper>

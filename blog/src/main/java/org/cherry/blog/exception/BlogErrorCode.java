@@ -7,7 +7,8 @@ import org.cherry.blog.constant.ErrorCode;
  * Created by zhengtengfei on 2019/3/19.
  */
 public enum  BlogErrorCode implements ErrorCode{
-    WRONG_DATA(601,"提交数据异常")
+    WRONG_DATA(601,"提交数据异常"),
+    DATA_REMAIN(602,"数据不为空，无法删除")
     ;
 
     private int status;
@@ -19,11 +20,11 @@ public enum  BlogErrorCode implements ErrorCode{
     }
     @Override
     public int getStatus() {
-        return 0;
+        return status;
     }
 
     @Override
     public String getMessage() {
-        return null;
+        return message;
     }
 }
