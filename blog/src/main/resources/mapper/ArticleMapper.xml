@@ -54,4 +54,10 @@
         WHERE is_delete = 0 AND article_typeId=#{typeId}
     </select>
 
+    <select id="selectById" resultType="org.cherry.blog.dto.ArticleDto">
+        SELECT *
+        FROM tb_article
+        WHERE is_delete = 0 AND id = #{id}
+    </select>
+
 </mapper>

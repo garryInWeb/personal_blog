@@ -8,7 +8,8 @@ import org.cherry.blog.constant.ErrorCode;
  */
 public enum  BlogErrorCode implements ErrorCode{
     WRONG_DATA(601,"提交数据异常"),
-    DATA_REMAIN(602,"数据不为空，无法删除")
+    DATA_REMAIN(602,"数据不为空，无法删除"),
+    USER_LOGIN_ERROR(603,"用户名或密码错误")
     ;
 
     private int status;

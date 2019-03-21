@@ -31,8 +31,9 @@ public class ArticleService {
       if(!checkOut(article))
           throw new AppBusinessException(BlogErrorCode.WRONG_DATA);
 
-      if (article.getId() != 0)
+      if (article.getId() != 0) {
           articleDao.update(article);
+      }
       else
           articleDao.save(getDetialsArticle(article));
     }
@@ -64,4 +65,7 @@ public class ArticleService {
         articleDao.update(article);
     }
 
+    public List<ArticleDto> find(long id) {
+        return articleDao.selectById(id);
+    }
 }

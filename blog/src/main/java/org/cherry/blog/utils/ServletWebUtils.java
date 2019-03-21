@@ -32,7 +32,7 @@ public abstract class ServletWebUtils {
                 }while (!headerName.equalsIgnoreCase("Content-Type")&&!headerName.equalsIgnoreCase("Accept"));
 
                 String headerValue = request.getHeader(headerName);
-                if (StringUtils.isNotBlank(headerValue) && headerValue.toUpperCase().equals("JSON")){
+                if (StringUtils.isNotBlank(headerValue) && headerValue.toLowerCase().equals("application/json")){
                     json = true;
                     break;
                 }

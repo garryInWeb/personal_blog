@@ -1,8 +1,8 @@
 package org.cherry.blog.constant;
 
 public enum CookieEnum {
-    LOGIN_COOKIE("登陆cookie","LOGIN_COOKIE"),
-    USER_NAME("用户名","USER_NAME")
+    LOGIN_COOKIE("登陆cookie","X-Token"),
+    USER_NAME("用户名","X-UUID")
     ;
 
 

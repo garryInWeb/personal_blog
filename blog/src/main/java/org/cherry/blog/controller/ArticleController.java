@@ -4,10 +4,7 @@ import org.cherry.blog.domain.Article;
 import org.cherry.blog.dto.ArticleDto;
 import org.cherry.blog.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +27,12 @@ public class ArticleController {
     public List<ArticleDto> all(){
         return articleService.findAll();
     }
+
+    @RequestMapping("/article/{id}")
+    public List<ArticleDto> find(@PathVariable("id")long id){
+        return articleService.find(id);
+    }
+
 
     @RequestMapping("/del")
     public String del(long id){
