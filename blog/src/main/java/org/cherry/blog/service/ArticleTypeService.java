@@ -29,8 +29,10 @@ public class ArticleTypeService {
         if (!checkOut(articleType))
             throw new AppBusinessException(BlogErrorCode.WRONG_DATA);
 
-        if (articleType.getId() != 0)
+        if (articleType.getId() != 0) {
+            articleType.setUpdateTime(LocalDateTime.now());
             articleTypeDao.update(articleType);
+        }
         else
             articleTypeDao.save(getDetialArticleType(articleType));
     }

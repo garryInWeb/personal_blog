@@ -65,7 +65,7 @@ public class ArticleService {
         articleDao.update(article);
     }
 
-    public List<ArticleDto> find(long id) {
+    public ArticleDto find(long id) {
         return articleDao.selectById(id);
     }
 }

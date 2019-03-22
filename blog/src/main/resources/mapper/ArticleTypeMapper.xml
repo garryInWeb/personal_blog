@@ -5,7 +5,7 @@
         update tb_articleType
         <set>
             <if test="typeName != null">`type_name` = #{typeName},</if>
-            <if test="articleTypeInfo != null">`articleType` = #{articleTypeInfo},</if>
+            <if test="articleTypeInfo != null">`articleType_info` = #{articleTypeInfo},</if>
             <if test="createTime != null">`create_time` = #{createTime},</if>
             <if test="updateTime != null">`update_time` = #{updateTime},</if>
             <if test="isDelete != null">`is_delete` = #{isDelete}</if>

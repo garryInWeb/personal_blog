@@ -15,7 +15,7 @@ public class Article {
     private String articleContent;
     private String articleInfo;
     private int articleCount;
-    private int articleFrom;
+    private boolean articleFrom;
     private String createBy;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;

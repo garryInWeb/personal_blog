@@ -29,7 +29,7 @@ public class ArticleServiceTest extends BaseTest{
         article.setArticleContent("第一篇");
         article.setArticleTypeId(1);
         article.setArticleCount(0);
-        article.setArticleFrom(0);
+        article.setArticleFrom(false);
         article.setArticleInfo("无");
         article.setArticleTitle("第一篇");
         article.setArticleTypeId(1);

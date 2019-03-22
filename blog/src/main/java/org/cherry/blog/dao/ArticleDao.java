@@ -13,5 +13,5 @@ public interface ArticleDao extends BaseDao<Article> {
     List<ArticleDto> selectAll();
     List<Article> selectByTypeId(long typeId);
 
-    List<ArticleDto> selectById(long id);
+    ArticleDto selectById(long id);
 }

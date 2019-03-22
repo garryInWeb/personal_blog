@@ -56,8 +56,8 @@
 
     <select id="selectById" resultType="org.cherry.blog.dto.ArticleDto">
         SELECT *
-        FROM tb_article
-        WHERE is_delete = 0 AND id = #{id}
+        FROM tb_article tar LEFT JOIN tb_articleType typ ON tar.article_typeId = typ.id
+        WHERE tar.is_delete = 0 AND tar.id = #{id}
     </select>
 
 </mapper>
