@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Data
 public class PersonalLetter {
     private long id;
-    private String letter_content;
+    private String letterContent;
     private String ipAddress;
     private String reviewImg;
     private int status;

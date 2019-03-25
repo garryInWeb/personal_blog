@@ -45,7 +45,7 @@ public class PersonalLetterService {
     }
 
     private boolean checkOut(PersonalLetter personalLetter) {
-        return !StringUtils.isBlank(personalLetter.getLetter_content());
+        return !StringUtils.isBlank(personalLetter.getLetterContent());
     }
 
     public List<PersonalLetter> queryByStatus(int status) {
