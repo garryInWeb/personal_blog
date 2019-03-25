@@ -29,7 +29,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/article/{id}")
-    public List<ArticleDto> find(@PathVariable("id")long id){
+    public ArticleDto find(@PathVariable("id")long id){
         return articleService.find(id);
     }
 
