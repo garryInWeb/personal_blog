@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["chunk-2d237cb7"],{fd47:function(s,t,d){"use strict";d.r(t),t.default=[{title:"占位符演示",json:{name:{first:"@FIRST",middle:"@FIRST",last:"@LAST",full:"@first @middle @last"}}}]}}]);

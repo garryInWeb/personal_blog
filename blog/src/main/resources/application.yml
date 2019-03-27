@@ -15,3 +15,5 @@ mybatis:
     typeAliasesPackage: com.xdd.entity
     mapperLocations: classpath:mapper/*.xml
     configLocation: classpath:mybatis-config.xml
+web:
+    upload: D:/image/

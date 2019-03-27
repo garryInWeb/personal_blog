@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["chunk-2d0bb1ea"],{"39b0":function(n,c,e){"use strict";e.r(c),c.default="body {\n  background-color: aliceblue;\n  height: 100%;\n  .my-card {\n    height: 300px;\n    width: 300px;\n  }\n}"}}]);

@@ -16,6 +16,7 @@ public class Article {
     private String articleInfo;
     private int articleCount;
     private boolean articleFrom;
+    private String imageUrl;
     private String createBy;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;

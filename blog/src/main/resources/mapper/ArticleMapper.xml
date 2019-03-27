@@ -13,7 +13,8 @@
           `article_from`,
           `create_time`,
           `update_time`,
-          `is_delete`
+          `is_delete`,
+          `image_url`
         )
         VALUES
         (
@@ -25,7 +26,8 @@
           #{articleFrom},
           #{createTime},
           #{updateTime},
-          #{isDelete}
+          #{isDelete},
+          #{imageUrl}
         )
     </insert>
 
@@ -38,6 +40,7 @@
             <if test="articleInfo != null">`article_info` = #{articleInfo},</if>
             <if test="updateTime != null">`update_time` = #{updateTime},</if>
             <if test="isDelete != null">`is_delete` = #{isDelete}</if>
+            <if test="imageUrl != null">`image_url` = #{imageUrl}</if>
         </set>
         where id = #{id}
     </update>
